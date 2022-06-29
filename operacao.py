@@ -1,33 +1,33 @@
-import datetime
+from datetime import date
 
 class Operacao:
 
     def __init__(self, cpf: str, codigo: int):
-        self.data = datetime.date()
-        self.cpf = cpf
-        self.codigo = codigo
-        self.ativo = bool()
+        self._data = date.today()
+        self._cpf = cpf
+        self._codigo = codigo
+        self._ativo = bool()
 
-    def setData(self, data: datetime):
-        self.data = data
+    def setData(self, data: date):
+        self._data = data
 
     def getData(self):
-        return self.data
+        return self._data
 
     def setCpf(self, cpf: str):
-        self.cpf = cpf
+        self._cpf = cpf
 
     def getCpf(self):
-        return self.cpf
+        return self._cpf
 
     def setCodigo(self, codigo: int):
-        self.codigo = codigo
+        self._codigo = codigo
 
     def getCodigo(self):
-        return self.codigo
+        return self._codigo
 
     def setAtivo(self, ativo: bool):
-        self.ativo = ativo
+        self._ativo = ativo
 
     def isAtivo(self):
-        return bool(self.ativo)
+        return self._ativo

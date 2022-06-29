@@ -1,88 +1,90 @@
-import datetime
+from datetime import date
+
 
 class Filme:
 
     def __init__(self, codigo: int, titulo: str):
-        self.codigo = codigo
-        self.titulo = titulo
-        self.genero = []
-        self.datalancamento = str()
-        self.diretor = str()
-        self.atores = []
-        self.sinopse = str()
-        self.produtores = []
-        self.precolocacao = float()
-        self.numerocopias = int()
+        self._codigo = codigo
+        self._titulo = titulo
+        self._generos = []
+        self._datalancamento = date.today()
+        self._diretor = str()
+        self._atores = []
+        self._sinopse = str()
+        self._produtores = []
+        self._precolocacao = float()
+        self._numerocopias = int()
 
     def setCodigo(self, codigo: int):
-        self.codigo = codigo
+        self._codigo = codigo
 
     def getCodigo(self):
-        return self.codigo
+        return self._codigo
 
     def setTitulo(self, titulo: str):
-        self.titulo = titulo
+        self._titulo = titulo
 
     def getTitulo(self):
-        return self.titulo
+        return self._titulo
 
-    def setGenero(self, genero):
-        self.genero = genero
+    def setGeneros(self, generos):
+        self._generos = generos
 
-    def getGenero(self):
-        return self.genero
+    def getGeneros(self):
+        return self._generos
 
     def addGenero(self, genero: str):
-        self.genero += genero
+        self._generos.append(genero)
 
-    def setdatalancamento(self, datalancamento: str):
-        self.datalancamento = datalancamento
+    def setdatalancamento(self, datalancamento: date):
+        self._datalancamento = datalancamento
 
     def getdatalancamento(self):
-        return self.datalancamento
+        return self._datalancamento
 
-    def setDiretor(self, diretor:str):
-        self.diretor = diretor
+    def setDiretor(self, diretor: str):
+        self._diretor = diretor
 
     def getDiretor(self):
-        return self.diretor
+        return self._diretor
 
     def setAtores(self, atores):
-        self.atores = atores
+        self._atores = atores
 
     def getAtores(self):
-        return self.atores
+        return self._atores
 
     def addAtor(self, ator):
-        self.atores += ator
+        self._atores.append(ator)
 
     def setSinopse(self, sinopse: str):
-        self.sinopse = sinopse
+        self._sinopse = sinopse
 
     def getSinopse(self):
-        return self.sinopse
+        return self._sinopse
 
     def setProdutores(self, produtores):
-        self.produtores = produtores
+        self._produtores = produtores
 
     def getProdutores(self):
-        return self.produtores
+        return self._produtores
 
     def addProdutor(self, produtor: str):
-        self.produtores += produtor
+        self._produtores.append(produtor)
 
     def setprecolocacao(self, precolocacao: float):
-        self.precolocacao = precolocacao
+        self._precolocacao = precolocacao
 
     def getPrecoLocacao(self):
         return self.precoLocacao
 
     def setnumerocopias(self, numerocopias: int):
-        self.numerocopias = numerocopias
+        self._numerocopias = numerocopias
 
     def getnumerocopias(self):
-        return self.numerocopias
+        return self._numerocopias
 
     def imprimir(self):
-        return print('código', self.codigo, 'filme', self.titulo, 'gênero', self.genero, 'data de lançamento', self.datalancamento,
-                     'atores', self.atores, 'diretor', self.diretor, 'sinopse', self.sinopse)
+        return print('codigo', self._codigo, 'filme', self._titulo, 'generos', self._generos, 'data de lançamento',
+                     self._datalancamento,
+                     'atores', self._atores, 'diretor', self._diretor, 'sinopse', self._sinopse)
