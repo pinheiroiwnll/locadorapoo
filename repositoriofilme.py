@@ -24,7 +24,7 @@ class RepositorioFilme:
         else:
             filme.set_Titulo(filme.get_Titulo())
             filme.set_Genero(filme.get_Genero())
-            filme.set_DataLancamento(filme.get_DataLancamento)
+            filme.set_DataLancamento(filme.get_DataLancamento))
             filme.set_Diretor(filme.get_Diretor())
             filme.set_Atores(filme.get_Atores())
             filme.set_Sinopse(filme.get_Sinopse())
