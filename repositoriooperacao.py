@@ -1,4 +1,6 @@
 from operacao import Operacao
+from Operação.operacao import Operacao
+from reserva import Reserva
 
 
 class RepositorioOperacao(Operacao):
